@@ -27,7 +27,19 @@
         }
       ],
       "UpstreamPathTemplate": "/api/{version}/normas",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/normas/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site9.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/normas/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
     },
     {
       "DownstreamPathTemplate": "/api/{version}/empresas",
@@ -39,7 +51,19 @@
         }
       ],
       "UpstreamPathTemplate": "/api/{version}/empresas",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/empresas/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site10.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/empresas/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
     },
     {
       "DownstreamPathTemplate": "/api/{version}/consultorias",
@@ -50,8 +74,20 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/consultorias",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamPathTemplate": "/api/{version}/consultorias/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/consultorias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site10.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/consultorias/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
     }
   ],
   "GlobalConfiguration": {}
