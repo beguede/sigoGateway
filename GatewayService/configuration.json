@@ -1,21 +1,57 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/auth/signin",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/{version}/auth/usuario/gerar-token",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "andremagalhaes-001-site8.etempurl.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/acesso",
-      "UpstreamHttpMethod": [ "Post" ],
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3,
-        "DurationOfBreak": 1000,
-        "TimeoutValue": 500
-      }
+      "UpstreamPathTemplate": "/api/{version}/acessar",
+      "UpstreamHttpMethod": [ "Post" ]
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3,
+      //  "DurationOfBreak": 1000,
+      //  "TimeoutValue": 500
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/normas",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site9.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/normas",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/empresas",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site10.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/empresas",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/consultorias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "andremagalhaes-001-site10.etempurl.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/consultorias",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
   ],
   "GlobalConfiguration": {}

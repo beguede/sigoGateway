@@ -9,19 +9,12 @@ namespace GatewayService
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args)
-        {
-            var builder = WebHost.CreateDefaultBuilder(args);
-
-            builder//.ConfigureServices(s => s.AddSingleton(builder))
-                   .ConfigureAppConfiguration(
-                          ic => ic.AddJsonFile("configuration.json"))
-                    .UseStartup<Startup>();
-            var host = builder.Build();
-            return host;
-        }
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(ic => ic.AddJsonFile("configuration.json"))
+                .UseStartup<Startup>();
     }
 }
